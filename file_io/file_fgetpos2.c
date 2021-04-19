@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void)
+{
+    FILE *fp = NULL;
+    fpos_t position;
+
+    fp = fopen("myfile.txt", "w+");
+    fgetpos(fp, &position);
+    fputs("Hello, World!", fp);
+
+    fsetpos(fp, &position);
+    fputs("This is going to override previous content", fp);
+    fclose(fp);
+
+    return 0;
+}
