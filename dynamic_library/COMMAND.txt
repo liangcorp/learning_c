@@ -1,0 +1,17 @@
+# PIC means "Position Independent Code". Increases portability
+# *.so is for linux/unix
+# *.dll is for windows
+# *.dylib is for Mac
+
+# Create shared dyamic library
+$ gcc -g -fPIC main.c -shared -o libmylib.so
+
+# Comile the program and link it to the dynamic library
+$ gcc -I ../my_dynamic_lib/ -c main.c -o main.o
+
+# In linux "mylib" can be used instead of the full name "libmylib.so"
+$ gcc -o main main.o -L ../my_dynamic_lib/ -l mylib
+
+
+# In case PATH wasn't set
+export LD_LIBRARY_PATH=/home/.../.../../my_dynamic_lib:$LD_LIBRARY_PATH
