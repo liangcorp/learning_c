@@ -10,7 +10,7 @@ int main(void)
     char ch = ' ';
 
     fp = fopen(FILENAME, "r");
-    
+
     if (fp == NULL)
     {
         return -1;
@@ -20,7 +20,7 @@ int main(void)
 
     if (fp1 == NULL)
         return -1;
-    
+
     while ((ch = fgetc(fp)) != EOF)
     {
         if (islower(ch))

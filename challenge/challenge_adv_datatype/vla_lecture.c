@@ -5,7 +5,7 @@ int main(void)
     int i;
     int sum = 0;
     int size = 0;
-   
+
     printf("Enter the size of the array: ");
     scanf("%d", &size);
 

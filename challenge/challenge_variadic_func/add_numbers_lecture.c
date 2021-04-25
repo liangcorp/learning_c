@@ -12,7 +12,7 @@ int main(void)
 
     printf("\n 10 + 20 + 30 = %d", adding_numbers(3, 10, 20, 30));
 
-    printf("\n 10 + 20 + 30 + 40 = %d", 
+    printf("\n 10 + 20 + 30 + 40 = %d",
                         adding_numbers(4, 10, 20, 30, 40));
 
     printf("\n\n");

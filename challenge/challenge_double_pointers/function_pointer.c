@@ -16,7 +16,7 @@ int array2[] = { 38, 27, 87, 63, 59, 223, 132, 1, 19, 7 };
 
 int add(int a, int b)
 {
-    return a + b;	
+    return a + b;
 }
 
 int sub(int a, int b)
@@ -46,17 +46,17 @@ void display(int *x, int size);
 
 // main method
 int main( ){
-  
+
   int choice = 0;
 
-  // size of the array                      
-  unsigned int size = 0;		
-  
+  // size of the array
+  unsigned int size = 0;
+
   int *result = NULL;
 
   // set size to minimum size of the two arrays
-  size = sizeof(array1);			
-  
+  size = sizeof(array1);
+
   if (sizeof(array2) < size)
 	size = sizeof(array2);
 
@@ -78,21 +78,21 @@ int main( ){
 
 	int j = choice - 1;
 
-	result = performOp(array1, array2, size, func_pointer[j]);		
+	result = performOp(array1, array2, size, func_pointer[j]);
 
 	printf("\n\nThe Results are ...\n");
 	display(result, size);
-	
-	if(result!=NULL)  
+
+	if(result!=NULL)
 	   free(result);
 
   }
-  
+
   return 0;
 }
 
 
-// performs the given operation on all elements of the arrays A and B 
+// performs the given operation on all elements of the arrays A and B
 int* performOp(int *a, int *b, int size, int (* func_pointer) (int x, int y))
 {
       int *result = NULL;

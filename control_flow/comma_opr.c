@@ -6,7 +6,7 @@ int main(void)
 
     while (i < 100)
         sum += data[i], ++i;
-    
+
     int j = (f1(), f2());
 
     int x = (y = 3, (z = ++ y + 2) + 5);

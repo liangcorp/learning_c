@@ -22,7 +22,7 @@ void get_info(struct p_names pst)
 
     // Copy name to allocated memory
     strcpy(pst.f_name, temp);
-    
+
     printf("Please enter your last name.\n");
 
     fgets(temp, SLEN, stdin);

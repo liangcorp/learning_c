@@ -19,6 +19,6 @@ int main(void)
 
     printf("Before: %d\n", num);
     printf("After: %d\n", new_num);
-    
+
     return 0;
 }

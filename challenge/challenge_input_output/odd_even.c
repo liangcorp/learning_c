@@ -28,9 +28,9 @@ int main(void)
 
     while(getline(&line, &line_size, ptr_file) != EOF)
     {
-        sscanf(line, "%s\t%s\t%s\t%s\t%s", num[0], num[1], 
+        sscanf(line, "%s\t%s\t%s\t%s\t%s", num[0], num[1],
                                            num[2], num[3], num[4]);
-        
+
         for (i=0; i<5; i++)
         {
             if (atoi(num[i]) % 2 == 0)

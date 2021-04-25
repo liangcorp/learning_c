@@ -25,7 +25,7 @@ int main(void)
         scanf("%s", input);
 
         printf("Your input string is: %s\n", input);
-        
+
         free(input);
     }
     else

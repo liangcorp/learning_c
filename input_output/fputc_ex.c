@@ -12,7 +12,7 @@ int main(void)
         for (c='A'; c<='Z'; c++)
             fputc(c, p_file);
             // fputc(c, stdout);
-        
+
         fclose(p_file);
     }
 

@@ -17,7 +17,7 @@ int main(void)
         printf("Failed to rename file.");
     else
         printf("File renamed successfully.");
-    
+
     remove("myfile.txt");
     return 0;
 }

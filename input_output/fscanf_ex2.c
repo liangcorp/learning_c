@@ -17,7 +17,7 @@ int main(void)
 
     puts("Enter words to add to the file; press the #");
     puts("key at the beginning of a line to terminate.");
-    
+
     while ((fscanf(stdin, "%40s", words) == 1) && (words[0] != '#'))
         fprintf(fp, "%s\n", words);
 

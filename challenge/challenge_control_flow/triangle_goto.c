@@ -40,9 +40,9 @@ int main(void)
         }
 
     print_star1:
-        printf("    *    \n"); 
+        printf("    *    \n");
         goto tracking;
-    
+
     print_star2:
         printf("   * *   \n");
         goto tracking;

@@ -20,7 +20,7 @@
         Border:
             Solid: 0
             Dotted: 1
-            Dashed: 2      
+            Dashed: 2
  */
 
 #include <stdio.h>

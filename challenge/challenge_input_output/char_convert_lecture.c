@@ -44,7 +44,7 @@ void convert_case(FILE *f_ptr, const char *path)
 
     while ((ch = fgetc(f_ptr)) != EOF)
     {
-        /* 
+        /*
          * If current character is uppercase then toggle
          * it to lowercase and vice versa.
          */
@@ -52,7 +52,7 @@ void convert_case(FILE *f_ptr, const char *path)
             ch = tolower(ch);
         else if (islower(ch))
             ch = toupper(ch);
-        
+
         fputc(ch, dest);
     }
 

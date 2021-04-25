@@ -35,7 +35,7 @@ int main()
         player++;
 
     } while (game_status == -1);
-    
+
     if (game_status == 1)
         printf("==>\aPlayer %d win!", --player);
     else
@@ -71,8 +71,8 @@ int check_for_win()
         result = 1;
     else if (square[3] == square[5] && square[5] == square[7])
         result = 1;
-    else if (square[1] != '1' && square[2] != '2' && square[3] != '3' 
-                && square[4] != '4' && square[5] != '5' && square[6] != '6' 
+    else if (square[1] != '1' && square[2] != '2' && square[3] != '3'
+                && square[4] != '4' && square[5] != '5' && square[6] != '6'
                 && square[7] != '7' && square[8] != '8' && square[9] != '9')
         result = 0;
     else
@@ -92,7 +92,7 @@ void display_board()
     printf("Player 1 (x)  -  Player 2 (o)\n\n");
     printf("     |     |    \n");
     printf("  %c  |  %c  |  %c \n", (square)[1], (square)[2], (square)[3]);
-    printf("_____|_____|_____\n");   
+    printf("_____|_____|_____\n");
     printf("     |     |    \n");
     printf("  %c  |  %c  |  %c \n", (square)[4], (square)[5], (square)[6]);
     printf("_____|_____|_____\n");
@@ -102,7 +102,7 @@ void display_board()
 }
 
 /*
-    Set the board with the correct character, x or o 
+    Set the board with the correct character, x or o
     in the correct spot in the array
  */
 void mark_board(char mark)

@@ -37,8 +37,8 @@ int main(int argc, char * argv[])
         fprintf(stderr, "processed %d arguments\n", argc - 1);
         fprintf(stderr, "arg1 = %d, arg2 = %d\n", arg1, arg2);
     #endif
-    
+
     printf("%i\n", process(arg1, arg2));
 
-    return 0; 
+    return 0;
 }

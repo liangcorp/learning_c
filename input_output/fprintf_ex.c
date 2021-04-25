@@ -23,7 +23,7 @@ int main(void)
     if ((f = fopen("myfile", "r+")) == NULL)
     {
         printf("Cannot open the file...\n");
-        exit(1);    
+        exit(1);
     }
 
     printf("File content is--\n");
@@ -34,9 +34,9 @@ int main(void)
         fgets(ch, 100, f);
         printf("%s", ch);
     }
-    
+
     fclose(f);
 
-    return 0;    
+    return 0;
 
 }

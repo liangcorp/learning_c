@@ -1,8 +1,8 @@
-/* 
+/*
     Author: Chen Liang
-    Description: The goal of this challege is to further 
+    Description: The goal of this challege is to further
                     your understanding of dynamic loading.
-                You need to dynamically load the symbols 
+                You need to dynamically load the symbols
                     from the shared object library file
     Date: 25 Apr 2021
  */
@@ -42,7 +42,7 @@ int main(void)
 
     handle = dlopen("../string_functions/libstring_functions.so",
                                                     RTLD_LAZY);
-    
+
     if (!handle)
     {
         fputs(dlerror(), stderr);
@@ -53,7 +53,7 @@ int main(void)
 
     freq_of_char = dlsym(handle, "frequency_of_char");
     check_for_error();
-    printf("Frequency of W in \"World W\" is %d\n", 
+    printf("Frequency of W in \"World W\" is %d\n",
                             freq_of_char('W', "World W"));
 
     rm_non_alphabet_char = dlsym(handle, "remove_all_char");
@@ -62,7 +62,7 @@ int main(void)
     printf("Remove non alphabet from \"dwef32gid9A9_\" is %s\n",
                                                             new_str);
     free(new_str);
-    
+
     cal_len = dlsym(handle, "calculate_length");
     check_for_error();
     printf("The length of \"hello world\" is %d\n",
@@ -72,7 +72,7 @@ int main(void)
     check_for_error();
     new_str = str_concat("Chen", " Liang");
     printf("String concatination of \"Chen\" and \" Liang\" is %s\n",
-                                                            new_str); 
+                                                            new_str);
     free(new_str);
 
     cp_str = dlsym(handle, "copy_string");

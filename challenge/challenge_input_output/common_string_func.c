@@ -3,7 +3,7 @@
     Description: Write a program that takes two command line arguments
                 - the first is a character
                 - the second is a file name
-                
+
                 The program should print only those line the file
                     containing the given character
                     - lines in a file are identified by a '\n'

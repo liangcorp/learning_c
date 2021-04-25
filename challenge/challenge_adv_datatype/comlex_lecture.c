@@ -19,4 +19,3 @@ int main(void)
     printf("(1+2i)*(1-2i) = %.1f%+.1fi\n", creal(z4 * z5), cimag(z4 * z5));
     return 0;
 }
-

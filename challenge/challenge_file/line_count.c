@@ -25,6 +25,6 @@ int main(void)
     printf("Totle lines of text: %d\n", line_count);
 
     fclose(file_ptr);
-    
+
     return 0;
 }

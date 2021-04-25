@@ -21,4 +21,3 @@ struct car_data
         struct leasecompany leasecar;
     };
 };
-

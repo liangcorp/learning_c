@@ -15,7 +15,7 @@ double adding_numbers_fix_count(int count, ...)
     {
         num = va_arg(args1, double);
         sum += num;
-    }    
+    }
 
     va_end(args1);
 
@@ -57,7 +57,7 @@ double get_diff_max_min(int count, ...)
     {
         temp = va_arg(args1, double);
         if (min > temp)
-            min = temp;        
+            min = temp;
     }
 
     for (i = 0; i < (count - 1); i++)
@@ -78,9 +78,9 @@ int main(void)
     double sum = 0;
 
     sum = adding_numbers_fix_count(3, 3.0, 4.0, 5.5);
-    
+
     printf("Sum of 3, 4 and 5.5 is %.2lf\n", sum);
-    
+
     sum = add_numbers_fix_last(3.4, 4.3, 2.5, 3.1, 0.0);
     printf("Sum of 3.4, 4.3, 2.5 and 3.1 is: %.2lf\n", sum);
 

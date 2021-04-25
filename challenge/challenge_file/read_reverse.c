@@ -27,7 +27,7 @@ int main(void)
         c = fgetc(file_ptr);
         printf("%c", c);
     }
-    
+
     printf("\n");
 
     fclose(file_ptr);

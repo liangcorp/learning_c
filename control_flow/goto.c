@@ -14,7 +14,7 @@ int main(void)
 
         if (number < 0.0)
             goto jump;
-        
+
         sum += number;
     }
 

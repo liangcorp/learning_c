@@ -18,7 +18,7 @@ int main(void)
         fprintf (stderr, "Number of integers read = %i\n", nread);
         fprintf (stderr, "i = %i, j = %i, k = %i\n", i, j, k);
     #endif
-    
+
     printf("%d\n", process(i, j, k));
 
     return 0;

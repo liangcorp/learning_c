@@ -52,7 +52,7 @@ int main(void)
 
     printf("The greatest common divisor "
             "between %d and %d is %0.2f\n", x, y, result);
-    
+
     printf("Enter a float number: ");
     scanf("%f", &f);
     printf("Absolute number of %.2f is %.2f\n", f, absolute_value(f));
@@ -61,11 +61,11 @@ int main(void)
     printf("Enter a number: ");
     scanf("%f", &f);
     result = square_root(f);
-    
+
     if(result != 0)
         printf("The squre root of %0.2f is %0.2f\n", f, result);
     else
         printf("Can not find the square root of %0.2f\n", f);
-    
+
     return 0;
 }

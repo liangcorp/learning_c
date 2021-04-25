@@ -12,7 +12,7 @@ int main(void)
 
     printf("Enter a binary number: ");
     scanf("%d", &b_num);
-    
+
     result = convert_binary_to_decimal(b_num);
     printf("%lld in binary = %d in decimal", b_num, result);
 

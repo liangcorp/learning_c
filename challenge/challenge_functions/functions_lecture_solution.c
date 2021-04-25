@@ -33,7 +33,7 @@ int main()
     printf("Enter a number: ");
     scanf("%f", &f);
     result = square_root(f);
-    
+
     if(result != -1.0)
         printf("The squre root of %0.2f is %0.2f\n", f, result);
     else
@@ -61,7 +61,7 @@ float square_root(float x)
     const float epsilon = 0.00001;
     float guess = 1.0;
     float return_value = 0.0;
-    
+
     if (x < 0)
     {
         printf("Negative argument to square_root.\n");
@@ -72,7 +72,7 @@ float square_root(float x)
         {
             guess = (x / guess + guess) / 2.0;
             return_value = guess;
-        }            
+        }
 
     return return_value;
 }
@@ -81,6 +81,6 @@ float absolute_value(float x)
 {
     if (x < 0)
         x = -x;
-    
+
     return x;
 }

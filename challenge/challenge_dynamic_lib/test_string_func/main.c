@@ -18,7 +18,7 @@ int main(void)
 
     char *concatenated_str = string_concatenation("Chen ", "Liang");
     printf("%s\n", concatenated_str);
-    free(concatenated_str);    
+    free(concatenated_str);
 
     char *copy = copy_string("Copied string");
     printf("%s\n", copy);

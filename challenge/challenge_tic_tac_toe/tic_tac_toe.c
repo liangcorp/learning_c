@@ -44,7 +44,7 @@ void draw_board(char (*position)[])
     printf("Player 1 (x)  -  Player 2 (o)\n\n");
     printf("     |     |    \n");
     printf("  %c  |  %c  |  %c \n", (*position)[0], (*position)[1], (*position)[2]);
-    printf("_____|_____|_____\n");   
+    printf("_____|_____|_____\n");
     printf("     |     |    \n");
     printf("  %c  |  %c  |  %c \n", (*position)[3], (*position)[4], (*position)[5]);
     printf("_____|_____|_____\n");
@@ -73,9 +73,9 @@ int main(void)
     char position[BOARD_POSITIONS] = {  '1', '2', '3',
                                         '4', '5', '6',
                                         '7', '8', '9'};
-    /* 
+    /*
         Game will go on as long as:
-            1. It's not complete 
+            1. It's not complete
             2. All positions aren't filt
      */
     while (!game_complete && no_of_filt_positions < 9)
@@ -95,7 +95,7 @@ int main(void)
                 printf("Invalid input. Try again: ");
                 invalid_input = 1;
             }
-            else if (position[select_position - 1] == 'x' || 
+            else if (position[select_position - 1] == 'x' ||
                     position[select_position - 1] == 'o')
             {
                 printf("Postion already taken. Try again: ");
@@ -106,7 +106,7 @@ int main(void)
 
         // Won't skip player with an invalid input
         } while (invalid_input && !game_complete);
-        
+
         mark_board(player_no, select_position, &position);
 
         game_complete = check_for_win(player_no, &position);
@@ -119,7 +119,7 @@ int main(void)
                 no_of_filt_positions++;
         }
     }
-    
+
     draw_board(&position);
 
     if (game_complete)

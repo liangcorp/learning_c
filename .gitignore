@@ -1,2 +1,3 @@
 # Ignore a file without extension
 .vscode
+*.gch

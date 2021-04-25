@@ -30,12 +30,12 @@ int main(void)
         {
             yearly_total += rain_fall[year][month];
         }
-        
+
         total += yearly_total;
 
         printf("%d\t%.2f\n", years[year], yearly_total);
     }
-    
+
     yearly_average = total / sizeof(years);
 
     printf("\nThe yearly average is %.2f inches\n\n", yearly_average);

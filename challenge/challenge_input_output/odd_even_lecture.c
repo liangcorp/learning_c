@@ -36,7 +36,7 @@ int main(void)
         success = fscanf(f_ptr_in, "%d", &num);
 
     } while (success != -1);
-    
+
     fclose(f_ptr_in);
 
     return 0;
@@ -53,7 +53,7 @@ int is_prime(const int num)
 
     if (num < 0)
         return 0;
-    
+
     for (i=2; i<=num/2; i++)
     {
         /* If the number is disible by any number

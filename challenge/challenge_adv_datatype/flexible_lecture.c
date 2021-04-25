@@ -21,8 +21,8 @@ int main(void)
     m->len = array_size;
     m->array[0] = 55;
     m->array[1] = 199;
-    
+
     printf("array is %d:$d\n", m->array[0], m->array[1]);
-    
+
     return 0;
 }

@@ -10,7 +10,7 @@ void sum(size_t size)
         printf("Enter the numbers: ");
         scanf("%d", &array[i]);
         sum += array[i];
-    }    
+    }
 
     printf("Sum is %d\n", sum);
 }
@@ -23,5 +23,5 @@ int main(void)
     scanf("%zd", &size);
     sum(size);
 
-    return 0;    
+    return 0;
 }

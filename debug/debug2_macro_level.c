@@ -4,11 +4,11 @@
 /*
     gcc -D DEBON debug2_macro_level.c -o debug2_macro_level
     $ ./debug2_macro_level 1 5 10
-    $ ./debug2_macro_level 2 5 10   
+    $ ./debug2_macro_level 2 5 10
     $ ./debug2_macro_level 3 5 10
  */
 
-int Debug = 0; 
+int Debug = 0;
 
 #ifdef DEBON
     #define DEBUG(level, fmt, ...) \
@@ -46,8 +46,8 @@ int main(int argc, char * argv[])
 
     DEBUG(2, "processed %d arguments\n", argc - 1);
     DEBUG(3, "arg1 = %d, arg2 = %d\n", arg1, arg2);
-    
+
     printf("%i\n", process(arg1, arg2));
 
-    return 0; 
+    return 0;
 }

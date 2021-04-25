@@ -7,7 +7,7 @@ int get_greateset_common_denominator(int n, int m, int gcd)
             return gcd;
         else
             gcd = get_greateset_common_denominator(n, m, (gcd - 1));
-    
+
     return gcd;
 }
 

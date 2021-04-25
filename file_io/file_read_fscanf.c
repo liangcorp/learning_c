@@ -11,7 +11,7 @@ int main(void)
 
     if (fp != NULL)
         fputs("Hello how are you 2021", fp);
-    
+
     rewind(fp);
 
     fscanf(fp, "%s %s %s %s%s %d", str1, str2, str3, str4, &year);

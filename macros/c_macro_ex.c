@@ -18,6 +18,6 @@ int main(void)
     printf("Program last compiled at %s on %s\n", __TIME__, __DATE__);
 
     my_function_name();
-    
+
     return 0;
 }

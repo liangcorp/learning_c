@@ -22,7 +22,7 @@ struct time_and_date
 
 int main(void)
 {
-    struct time_and_date event = 
+    struct time_and_date event =
                 {{ .month = 2, .day = 1, .year = 2021},
                  { .hours = 3, .minutes = 30, .seconds = 0}
                 };

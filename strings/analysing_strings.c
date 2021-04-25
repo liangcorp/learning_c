@@ -20,7 +20,7 @@ int main(void)
             ++n_digits;     // increment digit count
         else if (ispunct(buf[i]))
             ++n_punct;
-        
+
         ++i;
     }
 

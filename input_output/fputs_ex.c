@@ -9,10 +9,10 @@ int main(void)
 
     if (fp == NULL)
         exit(1);
-    
+
     fputs("Hello there, I hope this article will help!", fp);
 
     fclose(fp);
-    
+
     return 0;
 }

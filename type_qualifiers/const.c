@@ -13,6 +13,6 @@ int main(void)
     const float * const ptr;    // All is const
 
     float const *pfc;   // same as const float *pfc;
-    
+
     return 0;
 }

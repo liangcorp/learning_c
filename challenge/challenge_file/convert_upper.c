@@ -27,7 +27,7 @@ int main(void)
 
     fclose(file_ptr);
     fclose(dest_file_ptr);
-    
+
     remove("myfile.txt");
     rename("temp.txt", "myfile.txt");
 

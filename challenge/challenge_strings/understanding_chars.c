@@ -12,8 +12,8 @@ int main(void)
     const char word3[] = "whatever";
     char result[50];
 
-    printf("%d  %d  %d\n", string_length(word1), 
-                            string_length(word2), 
+    printf("%d  %d  %d\n", string_length(word1),
+                            string_length(word2),
                             string_length(word3));
 
     concat(result, word1, word2);
@@ -21,7 +21,7 @@ int main(void)
     printf("\n%s", result);
 
     printf("%d", equal_strings("Jason", "Jason"));
-    
+
     return 0;
 }
 

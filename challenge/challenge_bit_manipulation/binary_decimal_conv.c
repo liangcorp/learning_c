@@ -7,7 +7,7 @@ int binary_to_decimal(long long b_num)
     int i = 0;
 
     while (b_num != 0)
-    {        
+    {
         d_num += (b_num % 10) * pow(2, i);
         printf("%d * 2^%d\n", b_num % 10, i);
         b_num = b_num / 10; //  move the binary to the right by 1 bit
@@ -31,7 +31,7 @@ long long decimal_to_binary(int d_num)
         d_num = quotient;
 
         b_num += remainder * decimal_pos;
-        decimal_pos *= 10;        
+        decimal_pos *= 10;
     }
 
     return b_num;

@@ -21,7 +21,7 @@ int main(void)
             {
                 is_prime = 0;
             }
-            
+
         }
 
         if (is_prime)
@@ -31,11 +31,11 @@ int main(void)
         }
 
         is_prime = 1;
-            
+
     }
- 
+
     printf("Prime numbers:");
- 
+
     for (counter=0; counter<HUNDRED; counter++)
     {
         if(prime_number[counter] == 0)

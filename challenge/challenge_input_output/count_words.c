@@ -20,9 +20,9 @@ int main(int argc, char const *argv[])
         while((ch = getchar()) != EOF)
         {
             char_count++;
-            if(ch == '\n') 
+            if(ch == '\n')
             {
-                word_count++; 
+                word_count++;
             }
         }
         printf("Entered %d characters\n", char_count);
@@ -42,10 +42,10 @@ int main(int argc, char const *argv[])
 
                 if (ch == EOF)
                     break;
-                
+
                 char_count++;
                 printf("%c", ch);
-        
+
                 if (ch == '\n')
                     word_count++;
             }
@@ -59,7 +59,7 @@ int main(int argc, char const *argv[])
             exit(1);
         }
     }
-    
+
     else
     {
         printf("Invalid number of arguments.\n");

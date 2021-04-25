@@ -34,7 +34,7 @@ int main(void)
 
     for (i=0; i< prime_index; ++i)
         printf("%i ", primes[i]);
-    
+
     printf("\n");
     return 0;
 }

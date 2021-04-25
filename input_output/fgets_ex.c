@@ -28,8 +28,8 @@ int main(void)
         }
         else
         {
-            while (((ch = getchar()) != '\n') && 
-                !feof(stdin) && 
+            while (((ch = getchar()) != '\n') &&
+                !feof(stdin) &&
                 !ferror(stdin));
         }
     }

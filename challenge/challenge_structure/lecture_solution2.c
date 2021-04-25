@@ -21,7 +21,7 @@ int main(void)
 
     p_item = &itm;
     p_item->item_name = (char *)malloc(30 * sizeof(char));
-    
+
     if(p_item)
         exit(-1);
     else

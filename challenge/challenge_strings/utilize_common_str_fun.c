@@ -7,7 +7,7 @@ void reverse_string(char *str)
     printf("%s in reverse is:\n", str);
     for (i = (strlen(str) - 1); i >= 0; i--)
         printf("%c", str[i]);
-    
+
     printf("\n");
 }
 

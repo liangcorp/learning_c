@@ -24,7 +24,7 @@ int main(void)
 
     printf("Hire Date: ");
     scanf("%s", emp.date);
-    
+
     printf("Salary: ");
     scanf("%f", &emp.salary);
 

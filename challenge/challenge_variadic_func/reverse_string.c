@@ -20,6 +20,6 @@ int main(void)
     reverse_string(str, strlen(str));
 
     printf("\n");
-    
+
     return 0;
 }

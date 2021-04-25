@@ -15,6 +15,6 @@ int main()
 	printf("doubleVar = %g\n", doubleVar);
 	printf("charVar = %c\n", charVar);
 	printf("boolVar = %i\n", boolVar);
-	
+
 	return 0;
 }

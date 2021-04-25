@@ -13,7 +13,7 @@ int main(void)
 
     if (fp == NULL)
         return -1;
-    
+
     fseek(fp, 0, SEEK_END);
 
     cnt = ftell(fp);
@@ -27,6 +27,6 @@ int main(void)
     printf("\n");
     fclose(fp);
     fp = NULL;
-    
+
     return 0;
 }

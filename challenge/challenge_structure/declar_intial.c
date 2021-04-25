@@ -35,7 +35,7 @@ int main(void)
     alice.name = (char *)malloc(NAME_LENGTH);
     strncpy(alice.name, name, sizeof(name));
 
-    printf("Employ 1\nName: %s\nHire Date: %d\nSalary: %.2f\n", 
+    printf("Employ 1\nName: %s\nHire Date: %d\nSalary: %.2f\n",
                                                     john.name,
                                                     john.hire_date,
                                                     john.salary);

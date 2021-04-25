@@ -23,6 +23,6 @@ int main(void)
         printf("%d ", p_array->array[i]);
     }
     printf("\n");
-    
-    return 0;   
+
+    return 0;
 }

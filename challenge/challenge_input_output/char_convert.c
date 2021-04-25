@@ -9,7 +9,7 @@
 int main(int argc, char const *argv[])
 {
     FILE *p_file, *p_temp_file;
-    
+
     char ch;
 
     int i = 0;
@@ -44,9 +44,9 @@ int main(int argc, char const *argv[])
             printf("Conversion written to files\n");
             rename("temp_file.txt", argv[1]);
             remove("temp_file.txt");
-            
+
             break;
-        
+
         default:
             printf("Program accepts exactly 1 argument.\n");
             break;

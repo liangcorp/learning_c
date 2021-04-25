@@ -9,7 +9,7 @@ int main(void)
 
     while (str1[count] != '\0') // Increment count till we reach the
         ++count;                // terminating character
-    
+
     printf("The length of the string \"%s\" is %d characters.\n", str1, count);
 
     count = 0;                  // Reset count for next string

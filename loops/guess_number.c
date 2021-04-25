@@ -37,9 +37,9 @@ int main()
         guess_left = NO_OF_GUESSES - guess_counter - 1;
 
         if (guess_counter < 4)
-            printf("%d tr%s left. Try again: ", guess_left, 
+            printf("%d tr%s left. Try again: ", guess_left,
                                                 guess_left == 1 ? "y": "ies");
     }
-    
+
     return 0;
 }

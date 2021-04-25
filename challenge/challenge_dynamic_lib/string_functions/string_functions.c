@@ -1,4 +1,4 @@
-/* 
+/*
     Author: Chen Liang
     Description: Create a static library and then write
                     a program that uses that library
@@ -26,7 +26,7 @@ int frequency_of_char(const char c, const char *string)
     #ifdef DEBUG
         printf("Size of %s is %d\n", string, i);
     #endif
-    
+
     return count;
 }
 
@@ -98,7 +98,7 @@ char * string_concatenation(const char * fst_str, const char * sec_str)
     size_t size_sec_str = calculate_length(sec_str);
 
     /* Don't forget the null character at the end */
-    size_t size_result_str = size_fst_str + size_sec_str + 1; 
+    size_t size_result_str = size_fst_str + size_sec_str + 1;
 
     int i = 0;
     int j = 0;
@@ -125,7 +125,7 @@ char * string_concatenation(const char * fst_str, const char * sec_str)
 char * copy_string(const char * string)
 {
     int i = 0;
-    
+
     size_t size = calculate_length(string);
 
     char *result = NULL;
@@ -142,7 +142,7 @@ char * copy_string(const char * string)
 _Bool found_substring(const char * sub_str, const char * string)
 {
     _Bool found_str = 0;
-    
+
     int i = 0;
     int j = 0;
     int found_count = 0;
@@ -150,9 +150,9 @@ _Bool found_substring(const char * sub_str, const char * string)
     size_t size_sub_str = calculate_length(sub_str);
     size_t size_str = calculate_length(string);
 
-    /* 
+    /*
         Move the string one charactor to the right each loop.
-        Make sure the loop can reach the last character.    
+        Make sure the loop can reach the last character.
      */
     for (i = 0; i <= (size_str - size_sub_str); i++)
     {
@@ -179,7 +179,7 @@ _Bool found_substring(const char * sub_str, const char * string)
             found_str = 1;
             break;
         }
-    }    
-    
+    }
+
     return found_str;
 }

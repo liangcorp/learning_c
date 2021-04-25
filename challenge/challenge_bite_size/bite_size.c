@@ -10,5 +10,5 @@ int main()
     printf("Size of double: %zd bytes\n", sizeof(double));
     printf("Size of long double: %zd bytes\n", sizeof(long double));
 
-    return 0; 
+    return 0;
 }

@@ -10,5 +10,5 @@ struct
         float f;
         char c;
     } data;
-    
+
 } table [entries];

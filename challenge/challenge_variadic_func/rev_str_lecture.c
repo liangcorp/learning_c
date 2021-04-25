@@ -12,9 +12,9 @@ int main(void)
 
     printf("The orginal string is: %s\n", str);
     rev = reverse(str);
-    
+
     printf("The reverse string is: %s\n", rev);
-    
+
     return 0;
 }
 
@@ -22,7 +22,7 @@ char* reverse(char *str)
 {
     static int i = 0;
     static char rev[100];
-    
+
     if (*str != NULL)
     {
         reverse(str + 1);
