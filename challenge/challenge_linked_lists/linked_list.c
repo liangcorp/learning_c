@@ -32,7 +32,7 @@ void insert_at_first(node_t **head, int value)
             printf("Insert into empty linked list\n");
             printf("Allocating memory\n");
         #endif
-        (*head) = calloc(1, sizeof(node_t));
+        (*head) = (struct node *)calloc(1, sizeof(node_t));
         (*head)->index = i;
         (*head)->value = value;
         (*head)->next_node_ptr = NULL;
@@ -44,12 +44,11 @@ void insert_at_first(node_t **head, int value)
             printf("Allocating memory\n");
         #endif
 
-        new_node = calloc(1, sizeof(node_t));
+        new_node = (struct node *)calloc(1, sizeof(node_t));
         new_node->index = i;
         new_node->value = value;
         new_node->next_node_ptr = *head;
         *head = new_node;
-
 
         current_node = *head;
 
@@ -59,7 +58,7 @@ void insert_at_first(node_t **head, int value)
             current_node = current_node->next_node_ptr;
             i++;
         }
-
+        // free(new_node);
         free(current_node);
     }
 }
@@ -76,7 +75,7 @@ void insert_at_last(node_t **head, int value)
             printf("Insert into empty linked list\n");
             printf("Allocating memory\n");
         #endif
-        (*head) = calloc(1, sizeof(node_t));
+        (*head) = (struct node *)calloc(1, sizeof(node_t));
         (*head)->index = i;
         (*head)->value = value;
         (*head)->next_node_ptr = NULL;
@@ -96,7 +95,7 @@ void insert_at_last(node_t **head, int value)
             printf("Allocating memory\n");
         #endif
 
-        new_node = calloc(1, sizeof(node_t));
+        new_node = (struct node *)calloc(1, sizeof(node_t));
         new_node->index = ++i;
         new_node->value = value;
         new_node->next_node_ptr = NULL;
@@ -127,7 +126,7 @@ void insert_at_position(node_t **head, int value, int position)
             printf("Insert into empty linked list\n");
             printf("Allocating memory\n");
         #endif
-        (*head) = calloc(1, sizeof(node_t));
+        (*head) = (struct node *)calloc(1, sizeof(node_t));
         (*head)->index = position;
         (*head)->value = value;
         (*head)->next_node_ptr = NULL;
@@ -135,7 +134,7 @@ void insert_at_position(node_t **head, int value, int position)
 
     else if (*head != NULL && position == 1)
     {
-        new_node = calloc(1, sizeof(node_t));
+        new_node = (struct node *)calloc(1, sizeof(node_t));
         new_node->index = position;
         new_node->value = value;
         new_node->next_node_ptr = *head;
@@ -171,7 +170,7 @@ void insert_at_position(node_t **head, int value, int position)
                 printf("Allocating memory\n");
             #endif
 
-            new_node = calloc(1, sizeof(node_t));
+            new_node = (struct node *)calloc(1, sizeof(node_t));
             new_node->index = position;
             new_node->value = value;
             new_node->next_node_ptr = next_node;
@@ -286,6 +285,7 @@ void delete_at_position(node_t **head, int position)
     }
     else if (position == 1)
     {
+        previous_node = *head;
         while (current_node != NULL)
         {
             current_node->index = index;
@@ -293,6 +293,7 @@ void delete_at_position(node_t **head, int position)
             index++;
         }
         (*head) = (*head)->next_node_ptr;
+        free(previous_node);
     }
     else
     {
@@ -330,9 +331,8 @@ void delete_at_position(node_t **head, int position)
         {
             printf("Position doesn't exist\n");
         }
-
-        free(current_node);
     }
+    free(current_node);
 }
 
 void update_value_at_position(node_t **head, int input_value, int position)

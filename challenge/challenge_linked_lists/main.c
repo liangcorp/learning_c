@@ -77,18 +77,21 @@ int main(void)
             printf("Input an integer: ");
             scanf("%d", &input_value);
             insert_at_position(&head, input_value, input_position);
+            clear_screen();
             break;
 
         case 4:
             printf("Input an integer: ");
             scanf("%d", &input_value);
             delete_first_occurrence(&head, input_value);
+            clear_screen();
             break;
 
         case 5:
             printf("Input an index postion: ");
             scanf("%d", &input_position);
             delete_at_position(&head, input_position);
+            clear_screen();
             break;
 
         case 6:
@@ -97,12 +100,14 @@ int main(void)
             printf("Input an value: ");
             scanf("%d", &input_value);
             update_value_at_position(&head, input_value, input_position);
+            clear_screen();
             break;
 
         case 7:
             printf("Input an value to find: ");
             scanf("%d", &input_value);
             find_element(head, input_value);
+            clear_screen();
             break;
 
         case 8:
@@ -115,6 +120,7 @@ int main(void)
             exit(EXIT_SUCCESS);
 
         default:
+            clear_screen();
             printf("Invalid input. Try again\n");
             break;
         }
@@ -124,34 +130,6 @@ int main(void)
         printf("Insert at first\n");
     #endif
 
-/*     insert_at_first(&head, 2);
-    insert_at_first(&head, 3);
-    insert_at_first(&head, 4);
-    insert_at_first(&head, 5);
-    insert_at_first(&head, 6);
-    insert_at_last(&head, 10);
-    insert_at_last(&head, 9);
-    insert_at_last(&head, 8);
-    insert_at_position(&head, 100, 3);
-    insert_at_position(&head, 100, 8);
-    delete_first_occurrence(&head, 11);
-    delete_first_occurrence(&head, 6);
-    delete_first_occurrence(&head, 5);
-    delete_at_position(&head, 11);
-    delete_at_position(&head, 2);
-    display_list(head);
-    update_value_at_position(&head, 2, 111);
-    update_value_at_position(&head, 2, 8);
-    find_element(head, 2);
-    find_element(head, 1000);
-
-    #ifdef DEBUG
-        printf("Display list\n");
-    #endif
-
-
-    display_list(head);
- */
     free_memory(head);
 
     return 0;
