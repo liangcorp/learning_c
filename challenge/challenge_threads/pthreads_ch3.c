@@ -77,6 +77,7 @@ void *print_counter(void *ptr)
 
     if ((NO_OF_THREADS / 2) == thread_count)
     {
+        sleep(1);   /* make sure all threads had been created */
         printf("Moving on to odd threads\n");
         pthread_cond_broadcast(&condition_cond);
     }
