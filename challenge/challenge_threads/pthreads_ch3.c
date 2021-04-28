@@ -101,7 +101,7 @@ int main(void)
         pthread_join(thread[j], NULL);
     }
 
-    pthread_exit(NULL);
+    // pthread_exit(NULL);
 
     return 0;
 }

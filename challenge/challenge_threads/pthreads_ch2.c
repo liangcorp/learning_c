@@ -78,9 +78,8 @@ int main(void)
     for (i = 0; j< NO_OF_THREADS; j++)
     {
         pthread_join(thread[j], NULL);
+        pthread_exit(thread[j]);
     }
-
-    pthread_exit(NULL);
 
     return 0;
 }
