@@ -107,11 +107,11 @@ int main(void)
 
     if (socket < 0)
     {
-        printf("%d accept failed", client);
+        printf("%d accept failed", client.sin_addr.s_addr);
         return 1;
     }
     {
-        printf("Connection from %d accepted\n", client);
+        printf("Connection from %d accepted\n", client.sin_addr.s_addr);
     }
 
     memset(client_message, '\0', sizeof(client_message));
@@ -120,13 +120,13 @@ int main(void)
     /* Received a message from the first client */
     if (recv(socket, client_message, 200, 0) < 0)
     {
-        printf("Receive from %d failed\n", client);
+        printf("Receive from %d failed\n", client.sin_addr.s_addr);
     }
     else
     {
         sscanf(client_message, "%d", &client_input_number);
         printf("Receive message %d from %d\n",
-                                client_input_number, client);
+                                client_input_number, client.sin_addr.s_addr);
 
         client_input_number--;
         sprintf(server_message, "%d", client_input_number);
@@ -143,22 +143,22 @@ int main(void)
 
     if (socket < 0)
     {
-        printf("%d accept failed", client);
+        printf("%d accept failed", client.sin_addr.s_addr);
         return 1;
     }
     {
-        printf("Connection from %d accepted\n", client);
+        printf("Connection from %d accepted\n", client.sin_addr.s_addr);
     }
 
     /* Send the result to the client2 */
     if (send(socket, server_message, strlen(server_message), 0) < 0)
     {
-        printf("Send to %d failed\n", client);
+        printf("Send to %d failed\n", client.sin_addr.s_addr);
         return 1;
     }
     else
     {
-        printf("Send message %s to %d\n", server_message, client);
+        printf("Send message %s to %d\n", server_message, client.sin_addr.s_addr);
     }
 
     /* Close client 2's socket */
