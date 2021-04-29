@@ -62,7 +62,7 @@ int socket_send(int socket_desc, char* rqst, short len_rqst)
 
     struct timeval tv;
     tv.tv_sec = 20; /* 20 seconds timeout */
-    tv.tv_usec = 0;
+    tv.tv_usec = 0;  /* Micro seconds */
 
     result_val = send(socket_desc, rqst, len_rqst, 0);
 

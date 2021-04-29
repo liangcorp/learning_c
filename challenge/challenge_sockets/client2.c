@@ -60,8 +60,9 @@ int socket_receive(int socket_desc, char* rsv, short len_rsv)
 {
     int result_val = -1;
     struct timeval tv;
-    tv.tv_usec = 20;    /* 20 seconds timeout */
-    tv.tv_sec = 0;
+
+    tv.tv_sec = 20;     /* 20 seconds timeout */
+    tv.tv_usec = 0;     /* Micro seconds */
 
     if (setsockopt(socket_desc, SOL_SOCKET, SO_RCVTIMEO,
                                     (char *)&tv, sizeof(tv)) < 0)
@@ -79,11 +80,11 @@ int socket_receive(int socket_desc, char* rsv, short len_rsv)
 int main(void)
 {
     int socket_desc = 0;
-    int read_size = -1;
+    int read_size = 0;
 
     struct sockaddr_in server;
 
-    char server_reply[100] = { 0 };
+    char server_reply[200] = { 0 };
 
     /* Create socket */
     socket_desc = create_socket();
