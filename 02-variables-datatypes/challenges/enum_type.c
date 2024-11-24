@@ -2,7 +2,6 @@
 
 int main()
 {
-
     enum Company {
         GOOGLE,
         FACEBOOK,
