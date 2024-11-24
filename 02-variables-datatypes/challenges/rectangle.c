@@ -2,15 +2,15 @@
 
 int main()
 {
-    float width = 1.0;
-    float height = 2.0;
-    float perimeter = (width + height) * 2;
-    float area = width * height;
+    double width = 1.0;
+    double height = 2.0;
+    double perimeter = (width + height) * 2;
+    double area = width * height;
 
-    printf("Rectangle width: %.2f\n", width);
-    printf("Rectangle height: %.2f\n", height);
-    printf("Rectangle perimeter: %.2f\n", perimeter);
-    printf("Rectangle area: %.2f\n", area);
+    printf("Rectangle width: %.2lf\n", width);
+    printf("Rectangle height: %.2lf\n", height);
+    printf("Rectangle perimeter: %.2lf\n", perimeter);
+    printf("Rectangle area: %.2lf\n", area);
 
     return 0;
 }
