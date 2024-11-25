@@ -2,21 +2,20 @@
 
 int main()
 {
+	enum Day {
+		Monday,
+		Tuesday,
+		Wednesday,
+		Thursday,
+		Friday,
+		Saturday,
+		Sunday
+	};
 
-    enum Day {
-        Monday,
-        Tuesday,
-        Wednesday,
-        Thursday,
-        Friday,
-        Saturday,
-        Sunday
-    };
+	for (enum Day day = Monday; day <= Sunday; day++)
+		continue;
 
-    for (enum Day day = Monday; day <= Sunday; day++)
-        continue;
+	printf("It's not Wednesday!\n");
 
-    printf("It's not Wednesday!\n");
-
-    return 0;
+	return 0;
 }
