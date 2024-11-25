@@ -15,7 +15,7 @@ int main()
 
 
 	for (i = 0; i < MAX_NO_GUESSES; i++) {
-		printf("You have %d guest left.\n", 5 - i);
+		printf("You have %d guess%s left.\n", 5 - i, (5 - i) == 1 ? "" : "es" );
 		printf("Enter a guess: ");
 		scanf("%d", &input);
 
