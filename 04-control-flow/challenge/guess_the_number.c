@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define MAX_NO_GUESSES 5
+
 int main()
 {
     time_t t;
@@ -12,7 +14,7 @@ int main()
 	int random = rand() % 21;
 
 
-	for (i = 0; i < 5; i++) {
+	for (i = 0; i < MAX_NO_GUESSES; i++) {
 		printf("You have %d guest left.\n", 5 - i);
 		printf("Enter a guess: ");
 		scanf("%d", &input);
