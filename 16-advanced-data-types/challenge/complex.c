@@ -2,6 +2,8 @@
 #include <complex.h>
 #include <math.h>
 
+//  #define PI 3.141592654
+
 int main()
 {
     double complex dc = I * I;
@@ -15,6 +17,12 @@ int main()
 
     double complex dc4 = 1 + 2 * I;
     double complex dc5 = 1 - 2 * I;
+
+    double complex dc4_conj = creal(dc4) + cimag(dc4) * -cimag(dc4);
+    double complex dc5_conj = creal(dc5) + cimag(dc5) * -cimag(dc5);
+
+    printf("conjugate of dc4 = %.2f%+.2f\n", creal(dc4_conj), cimag(dc4_conj));
+    printf("conjugate of dc5 = %.2f%+.2f\n", creal(dc5_conj), cimag(dc5_conj));
 
     return 0;
 }
