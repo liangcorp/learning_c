@@ -15,7 +15,8 @@ int main()
     printf("Enter the length of the array: ");
     scanf("%d", &length);
 
-    a_ptr = malloc(sizeof(struct my_array) + length * sizeof(int));
+    size_t size = sizeof(struct my_array);
+    a_ptr = malloc(size + length * sizeof(int));
 
     for (i = 0; i < length; i++) {
         printf("Input data for element %d: ", i + 1);
