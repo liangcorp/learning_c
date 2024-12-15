@@ -37,13 +37,14 @@ int main(int argc, char *argv[])
             fputc(ch, fp_temp);
 	}
 
-    rename("temp.txt", argv[1]);
-
     fclose(fp_origin);
     fclose(fp_temp);
 
     fp_origin = NULL;
     fp_temp = NULL;
+
+    remove(argv[1]);
+    rename("temp.txt", argv[1]);
 
     return 0;
 }
