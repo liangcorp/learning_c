@@ -2,6 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 
+int has_char(const char *ch, const char *line) {
+    while(*line != '\0') {
+        if (*line == *ch)
+            return 1;
+        line++;
+    }
+
+    return 0;
+}
+
 int main(int argc, char *argv[])
 {
 	if (argc != 3) {
@@ -29,7 +39,7 @@ int main(int argc, char *argv[])
 	}
 
 	while ((characters = getline(&buffer, &bufsize, fp)) != EOF) {
-		if (strstr(buffer, argv[1]))
+		if (has_char(argv[1], buffer))
 			printf("%s", buffer);
 	}
 
