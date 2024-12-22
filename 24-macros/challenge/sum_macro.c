@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define SUM(a, b) (a) + (b)
+#define SUM(a, b) ((a) + (b))
 
 int main()
 {
