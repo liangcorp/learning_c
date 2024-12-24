@@ -50,11 +50,12 @@ void display(int *array, int size)
 
 int main()
 {
+    int ch;
+    int *result = NULL;
+    char choice_number = '\0';
+
     int array1[] = {1, 2, 3, 4, 5, 6, 7};
     int array2[] = {1, 2, 3, 4, 5, 6, 7};
-
-    char choice_number = '\0';
-    int *result = NULL;
 
     while (choice_number != '5') {
         printf("Which operation do you want to perform?\n");
@@ -65,7 +66,7 @@ int main()
         printf("5. None\n");
         printf("Enter choice: ");
 
-        scanf(" %c", &choice_number);
+        scanf("%c", &choice_number);
 
         switch (choice_number) {
             case '1':
@@ -91,6 +92,9 @@ int main()
                 break;
         }
         printf("\n");
+
+        // flush buffer to remove "enter" white space
+        while ((ch = getchar()) != '\n' && ch != EOF);
     }
 
     free(result);
