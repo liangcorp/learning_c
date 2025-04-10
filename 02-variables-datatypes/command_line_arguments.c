@@ -4,7 +4,7 @@ int main(int argc, char *argv[])
 {
     int noOfArguments = argc;
     char *argument1 = argv[0];
-    char *arguemtn2 = argv[1];
+    char *argument2 = argv[1];
 
     printf("Number of arguments: %d\n", noOfArguments);
     printf("Argument 1 is the program name: %s\n", argument1);
